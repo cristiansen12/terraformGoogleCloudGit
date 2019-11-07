@@ -18,7 +18,6 @@ RUN curl -sSL https://sdk.cloud.google.com >> install_gcloud.sh && \
 ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
 
 #Clear caches
-RUN apk del --purge build && \
-    apk add --no-cache go && \
+RUN apk add --no-cache go && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
